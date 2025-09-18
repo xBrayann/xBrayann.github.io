@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiPortfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Mi Portfolio</h1>
+        </nav>
+    </header>
+
+
+        <section id="inicio">
+            <h2>¡Hola! Soy Brayan</h2>
+            <p>Desarrollador web apasionado por la creación de aplicaciones modernas y funcionales.</p>
+            <button onclick="scrollToSection('proyectos')">Ver mis proyectos</button>
+        </section>
+
+
+
+        <section id="sobremi">
+            <h2>Sobre mi</h2>
+            <p>Soy un Estudiante de Desarrollo y Gestión de Software con hablidades técnicas en 
+                Desarrollo de aplicaciones web. Experiencia en proyectos colaborativos 
+                con habilidades blandas en trabajo en equipo y resolución de problemas.
+                Me encanta aprender nuevas tecnologías y mejorar mis habilidades constantemente.
+            </p>
+        </section>
+
+
+
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <div class="contenedor-proyectos">
+                <div class="proyecto">
+                    <h3>Desarrollador Full Stack</h3>
+                    <p>Desarrollo de un sistema completo de e-commerce con .NET 6 en el
+                        backend y Angular 17 en el frontend, integrado con Firebase
+                        (Auth y Firestore), autenticación segura con JWT, carrito de compras
+                        persistente, sistema de opiniones, verificación de emails vía SMTP y
+                        procesamiento de pagos con PayPal SDK.
+                    </p>
+                </div>
+
+                <div class="proyecto">
+                    <h3>Desarrollador back-end</h3>
+                    <p>Desarrollador Back-end en un proyecto de página web de productos
+                        prefabricados, responsable de la lógica del servidor,
+                        optimización de bases de datos y desarrollo de funcionalidades
+                        para mejorar la experiencia del usuario y la escalabilidad del sitio.
+                    </p>
+                </div>
+
+                <div class="proyecto">
+                    <h3>Desarrollador back-end</h3>
+                    <p>
+                        Fui responsable del back en un proyecto universitario, diseñé y
+                        configure la base de datos utilizando Firebase Realtime Database.
+                        Esta estructura fue fundamental para almacenar información esencial
+                        como pedidos, productos y clientes, asegurando una gestión eficiente
+                        de los datos.
+                    </p>
+                </div>
+
+                <div class="proyecto">
+                    <h3>Desarrollador Full Stack</h3>
+                    <p>Desarrollé una página web informativa para una universidad,
+                        mostrando detalles de cada edificio. El proyecto fue implementado
+                        con tecnologías web nativas (HTML, CSS y JavaScript) y
+                        diseñado con enfoque responsive para adaptarse a distintos dispositivos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Puedes encontrarme en mis redes sociales:</p>
+            <div class="misredes">
+                <a href="https://github.com/xBrayann" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/brayan-gomez-b6015b2b3/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:brayangomez77208@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </section>
+
+
+
+        <footer>
+            <p>© 2025 Mi Portfolio</p>
+        </footer>
+</body>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    line-height: 1.6;
+    color: #333;
+}
+p {
+    font-size: 20px;
+    margin: 30px;
+}
+
+header {
+    background: #222;
+    color: #fff;
+    padding: 15px 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    list-style: none;
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contenedor-proyectos {
+    display: flex;           
+    justify-content: center; 
+    gap: 20px;
+    flex-wrap: wrap;        
+    padding: 20px;
+}
+
+.proyecto {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 300px;        
+    flex: 1 1 300px;             
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.proyecto h3 {
+    text-align: center;
+}
+
+.proyecto p {
+    text-align:start;
+}
+.proyecto:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+.proyecto img {
+    width: 65%;;
+    border-radius: 10px;
+}
+
+button {
+    font-size: 17px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    animation: zoomIn 0.4s ease forwards;
+    
+}
+
+i {
+    font-size: 25px;
+    color: black;
+}
+
+i:hover{
+    color: blue;
+    cursor: pointer;
+    animation: zoomIn 0.4s ease forwards;
+}
+
+footer {
+    text-align: center;
+    background: #222;
+    color: #fff;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1); 
+    }
+    100% {
+        transform: scale(0.85); 
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .contenedor-proyectos {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .proyecto {
+        max-width: 100%;
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    #inicio, p {
+        font-size: 18px;
+        margin: 15px;
+    }
+}
+
+</style>
+</html>
