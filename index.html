@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spec-Driven Development</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div id="progress-bar"></div>
+
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-icon">S</div>
+    <h1>Spec Driven Dev</h1>
+  </div>
+  <ul>
+    <li><a href="#openspec">OpenSpec</a></li>
+    <li><a href="#tools">Herramientas</a></li>
+    <li><a href="#workflow">Workflow</a></li>
+    <li><a href="#comparison">Prompts vs Specs</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <span class="hero-badge">AI Software Engineering • 2026</span>
+  <h2>Spec-Driven<br>Development</h2>
+  <p>Un enfoque moderno de ingeniería de software donde primero se define una especificación clara del sistema antes de generar código con inteligencia artificial.</p>
+  <div class="hero-actions">
+    <button class="btn-primary" onclick="scrollToSection()">Explorar ↓</button>
+    <button class="btn-secondary" onclick="document.getElementById('comparison').scrollIntoView({behavior:'smooth'})">Ver comparativa</button>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-number">4+</div>
+      <div class="stat-label">Herramientas</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">5</div>
+      <div class="stat-label">Pasos del flujo</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Estructura clara</div>
+    </div>
+  </div>
+</section>
+
+<!-- OpenSpec -->
+<section id="openspec" class="hidden">
+
+  <div class="section-header">
+    <span class="section-tag">Framework</span>
+    <h2>OpenSpec</h2>
+    <p class="section-desc">Framework open source para desarrollo guiado por especificaciones, diseñado para trabajar con asistentes de código con IA como Claude, Copilot o Codex.</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-icon">📦</div>
+      <h3>Qué es</h3>
+      <p>Un sistema para guardar especificaciones dentro del repositorio del proyecto para que la IA tenga siempre contexto claro.</p>
+      <p>Antes de escribir código, se define exactamente qué se quiere construir.</p>
+      <a href="https://openspec.dev/" target="_blank" rel="noopener">Sitio oficial →</a>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🎯</div>
+      <h3>Problema que resuelve</h3>
+      <p>Cuando programas con IA sin estructura:</p>
+      <ul>
+        <li>Las instrucciones se pierden en el chat</li>
+        <li>El contexto se degrada con el tiempo</li>
+        <li>El modelo comete errores acumulativos</li>
+      </ul>
+      <p>OpenSpec mantiene las especificaciones como archivos versionados dentro del repositorio.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🔄</div>
+      <h3>Flujo típico</h3>
+      <ul>
+        <li>Crear spec</li>
+        <li>Crear propuesta de cambio</li>
+        <li>Generar tareas</li>
+        <li>La IA implementa el código</li>
+        <li>Archivar cambios</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h3 style="margin-top:48px; margin-bottom:8px; color:var(--text-muted); font-size:14px; text-transform:uppercase; letter-spacing:1px;">Estructura de ejemplo</h3>
+  <pre>openspec/
+  specs/
+  changes/
+      add-feature/
+          proposal.md
+          tasks.md
+          design.md</pre>
+
+  <p style="margin-top:20px; color:var(--text-muted);">En resumen: OpenSpec es un sistema para planear features <strong style="color:white">antes</strong> de que la IA escriba código.</p>
+
+</section>
+
+<!-- Tools -->
+<section id="tools" class="hidden">
+
+  <div class="section-header">
+    <span class="section-tag">Ecosistema</span>
+    <h2>Herramientas relacionadas</h2>
+    <p class="section-desc">Proyectos y recursos que complementan el enfoque Spec-Driven en el desarrollo con IA.</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-icon">🛠️</div>
+      <h3>Spec-Kit</h3>
+      <p>Toolkit creada por GitHub para desarrollo guiado por especificaciones. Organiza el desarrollo en pasos estructurados y reproducibles.</p>
+      <a href="https://github.com/github/spec-kit" target="_blank" rel="noopener">Ver repositorio →</a>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📚</div>
+      <h3>ai-specs</h3>
+      <p>Repositorio educativo con ejemplos de especificaciones para proyectos con IA. Incluye plantillas, ejemplos y patrones listos para usar.</p>
+      <a href="https://github.com/LIDR-academy/ai-specs" target="_blank" rel="noopener">Ver repositorio →</a>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🤖</div>
+      <h3>agency-agents</h3>
+      <p>Colección de 51 agentes de IA especializados que simulan una empresa completa. Cada agente tiene personalidad, instrucciones y workflow.</p>
+      <a href="https://github.com/msitarzewski/agency-agents" target="_blank" rel="noopener">Ver repositorio →</a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Workflow -->
+<section id="workflow" class="hidden">
+
+  <div class="section-header">
+    <span class="section-tag">Proceso</span>
+    <h2>Flujo de Spec-Driven Development</h2>
+    <p class="section-desc">Las IA programan mejor cuando tienen estructura y contexto claro definido de antemano.</p>
+  </div>
+
+  <div class="flow">
+    <div class="step-wrapper">
+      <div class="step">
+        <span>💡</span>
+        <p>Idea</p>
+      </div>
+    </div>
+    <span class="step-arrow">→</span>
+    <div class="step-wrapper">
+      <div class="step">
+        <span>📄</span>
+        <p>Spec</p>
+      </div>
+    </div>
+    <span class="step-arrow">→</span>
+    <div class="step-wrapper">
+      <div class="step">
+        <span>📐</span>
+        <p>Plan</p>
+      </div>
+    </div>
+    <span class="step-arrow">→</span>
+    <div class="step-wrapper">
+      <div class="step">
+        <span>🧩</span>
+        <p>Tasks</p>
+      </div>
+    </div>
+    <span class="step-arrow">→</span>
+    <div class="step-wrapper">
+      <div class="step">
+        <span>🤖</span>
+        <p>Code</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- COMPARISON -->
+<section id="comparison" class="hidden">
+
+  <div class="section-header">
+    <span class="section-tag">Análisis</span>
+    <h2>Prompts vs Specs</h2>
+    <p class="section-desc">La diferencia entre un proyecto caótico y uno bien documentado empieza antes de escribir la primera línea de código.</p>
+  </div>
+
+  <div class="compare">
+
+    <div class="compare-card bad">
+      <div class="compare-card-header bad">
+        <span class="compare-badge bad">Sin estructura</span>
+        <h3>Solo Prompts</h3>
+      </div>
+      <div class="compare-card-body">
+        <p>Ejemplo de prompt típico:</p>
+        <pre style="font-size:12px;">Create a website with Angular,
+.NET and SQLite
+that shows countries with charts</pre>
+        <p>Problemas resultantes:</p>
+        <ul>
+          <li>Cada prompt es diferente e inconsistente</li>
+          <li>La IA pierde contexto con el tiempo</li>
+          <li>El proyecto se vuelve difícil de mantener</li>
+          <li>Requisitos poco claros generan bugs</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="compare-card good">
+      <div class="compare-card-header good">
+        <span class="compare-badge good">Con estructura</span>
+        <h3>Usando Specs</h3>
+      </div>
+      <div class="compare-card-body">
+        <p>Flujo estructurado:</p>
+        <pre style="font-size:12px;">Idea  →  Spec  →  Tasks  →  AI implementa</pre>
+        <p>Beneficios obtenidos:</p>
+        <ul>
+          <li>Sistema documentado y versionado</li>
+          <li>La IA entiende el contexto completo</li>
+          <li>Decisiones trazables y reproducibles</li>
+          <li>Onboarding fácil para nuevos devs</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Example -->
+<section class="hidden">
+
+  <div class="section-header">
+    <span class="section-tag">Caso práctico</span>
+    <h2>Ejemplo práctico</h2>
+    <p class="section-desc">Imagina que tu web crece y quieres agregar múltiples features nuevas al mismo tiempo.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-icon">🗺️</div>
+      <h3>Sin specs</h3>
+      <p>Vas pidiendo features una por una a la IA. El contexto se fragmenta, las decisiones se contradicen y el código se vuelve inconsistente.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📋</div>
+      <h3>Con specs</h3>
+      <p>Defines primero: mapa del mundo, buscador, filtros, estadísticas y comparador de países. La IA entiende el sistema completo desde el principio.</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- Summary -->
+<section class="hidden">
+
+  <div class="section-header">
+    <span class="section-tag">Resumen</span>
+    <h2>Comparativa de proyectos</h2>
+    <p class="section-desc">Un vistazo rápido a las herramientas y su propósito dentro del ecosistema Spec-Driven.</p>
+  </div>
+
+  <div class="table-container">
+    <table>
+      <tr>
+        <th>Proyecto</th>
+        <th>Qué es</th>
+      </tr>
+      <tr>
+        <td>OpenSpec</td>
+        <td>Framework ligero de specs para AI coding</td>
+      </tr>
+      <tr>
+        <td>Spec-Kit</td>
+        <td>Toolkit de GitHub para desarrollo con specs</td>
+      </tr>
+      <tr>
+        <td>ai-specs</td>
+        <td>Ejemplos y plantillas de especificaciones</td>
+      </tr>
+      <tr>
+        <td>agency-agents</td>
+        <td>Colección de 51 agentes especializados con IA</td>
+      </tr>
+    </table>
+  </div>
+
+</section>
+
+<!-- When to use -->
+<section class="hidden">
+
+  <div class="section-header">
+    <span class="section-tag">Guía de uso</span>
+    <h2>¿Cuándo usar Specs?</h2>
+    <p class="section-desc">No siempre es necesario aplicar Spec-Driven Development. Aquí tienes una guía rápida.</p>
+  </div>
+
+  <div class="two-col">
+
+    <div class="info-box yes">
+      <div class="info-box-title">✅ Úsalo cuando...</div>
+      <ul>
+        <li>El proyecto es grande o complejo</li>
+        <li>Trabajan varias personas en el equipo</li>
+        <li>Habrá muchos cambios e iteraciones</li>
+        <li>Hay agentes de IA programando código</li>
+        <li>Necesitas trazabilidad de decisiones</li>
+      </ul>
+    </div>
+
+    <div class="info-box no">
+      <div class="info-box-title">❌ No hace falta cuando...</div>
+      <ul>
+        <li>Es una web simple o landing page</li>
+        <li>Script pequeño o de un solo uso</li>
+        <li>Prototipo rápido o exploración</li>
+        <li>Proyecto personal sin colaboradores</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  <div class="footer-logo">Spec Driven Dev</div>
+  <div class="footer-sub">AI Software Engineering · 2026</div>
+  <div class="footer-links">
+    <a href="#openspec">OpenSpec</a>
+    <a href="#tools">Herramientas</a>
+    <a href="#workflow">Workflow</a>
+    <a href="#comparison">Comparativa</a>
+  </div>
+  <p>Spec-Driven Development · Construye mejor con IA</p>
+</footer>
+
+<button id="back-to-top" title="Volver arriba">↑</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
